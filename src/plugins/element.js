@@ -4,17 +4,53 @@ import {
   Form,
   FormItem,
   Input,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Menu,
+  MenuItem,
+  Submenu,
   Loading,
   MessageBox,
   Message,
-  Notification
+  Notification,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Row,
+  Col,
+  Table,
+  TableColumn,
+  Switch,
+  Tooltip,
+  Pagination,
+  Dialog
 } from 'element-ui';
 
 const cmp = [
   Button,
   Form,
   FormItem,
-  Input
+  Input,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Menu,
+  MenuItem,
+  Submenu,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Row,
+  Col,
+  Table,
+  TableColumn,
+  Switch,
+  Tooltip,
+  Pagination,
+  Dialog
 ];
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;

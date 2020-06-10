@@ -51,10 +51,7 @@ export default {
         if (!valid) return;
         const result = await this.$http.login(this.loginForm);
         if (result.meta.status !== 200) return this.$message.error('登陆失败');
-        this.$message({
-          message: '登陆成功',
-          type: 'success'
-        });
+        this.$message.success('登陆成功');
         window.sessionStorage.setItem('token', result.data.token);
         this.$router.push('/home');
       });
@@ -65,12 +62,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.login_container
-{
+.login_container {
   background-color: #2b4b6b;
   height: 100%;
-  .login_box
-  {
+  .login_box {
     width: 450px;
     height: 300px;
     background-color: #fff;
@@ -79,8 +74,7 @@ export default {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    .avatar_box
-    {
+    .avatar_box {
       height: 130px;
       width: 130px;
       border: 1px solid #eee;
@@ -99,20 +93,17 @@ export default {
         background-color: #eee;
       }
     }
-    .login_form::v-deep
-    {
+    .login_form::v-deep {
       position: absolute;
       bottom: 0;
       width: 100%;
       padding: 0 20px;
       box-sizing: border-box;
-      span i
-      {
+      span i {
         font-size: 20px;
         line-height: 40px;
       }
-      .btns
-      {
+      .btns {
         display: flex;
         justify-content: flex-end;
       }
