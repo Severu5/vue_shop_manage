@@ -224,14 +224,14 @@ export default {
       this.userList = result.data.users;
       this.total = result.data.total;
     },
+    // 监听 pagezide 改变
     handleSizeChange(newPagesize) {
-      // 监听 pagezide 改变
       console.log(newPagesize);
       this.queryInfo.pagesize = newPagesize;
       this.getUserList();
     },
+    // 监听页码值改变
     handleCurrentChange(newpage) {
-      // 监听页码值改变
       this.queryInfo.pagenum = newpage;
       this.getUserList();
     },
@@ -243,12 +243,12 @@ export default {
       }
       this.$message.success('更新用户状态成功');
     },
+    // 监听添加用户对话框关闭事件
     addDialogClosed() {
-      // 监听添加用户对话框关闭事件
       this.$refs.addFormRef.resetFields();
     },
+    // 点击确定按钮添加新用户
     addUser() {
-      // 点击确定按钮添加新用户
       this.$refs.addFormRef.validate(async valid => {
         if (!valid) return;
         const result = await this.$http.addUser(this.addForm);
@@ -258,8 +258,8 @@ export default {
         this.getUserList();
       });
     },
+    // 展示编辑用户的对话框
     async showEditDialog(id) {
-      // 展示编辑用户的对话框
       this.editDialogVisible = true;
       const result = await this.$http.getUserDetail(id);
       if (result.meta.status !== 200) return this.$message.error('获取用户信息失败');
@@ -268,8 +268,8 @@ export default {
     editDialogClosed() {
       this.$refs.editFormRef.resetFields();
     },
+    // 修改用户信息并提交
     editUserInfo() {
-      // 修改用户信息并提交
       this.$refs.editFormRef.validate(async valid => {
         if (!valid) return this.$message.error('表单验证失败');
         const result = await this.$http.editUser({
@@ -285,8 +285,8 @@ export default {
         this.$message.success('用户信息更新成功');
       });
     },
+    // 根据 id 删除对应用户
     async removeUserById(id) {
-      // 根据 id 删除对应用户
       const confirmResult = await this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
@@ -300,8 +300,8 @@ export default {
       this.getUserList();
       this.$message.success('删除用户成功');
     },
+    // 展示分配角色对话框
     async setRole(userInfo) {
-      // 展示分配角色对话框
       this.userInfo = userInfo;
       // 在展示对话框之前请求所有的角色列表
       const result = await this.$http.getRoles();

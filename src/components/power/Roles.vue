@@ -107,8 +107,8 @@ export default {
       if (result.meta.status !== 200) return this.$message.error('获取角色列表失败');
       this.roleList = result.data;
     },
+    // 根据 id 删除对应的权限
     async removeRightById(role, id) {
-      // 根据 id 删除对应的权限
       const confirmResult = await this.$confirm('此次操作将永久删除该权限，是否删除?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
@@ -145,8 +145,8 @@ export default {
     setRightDialogClosed() {
       this.defKeys = [];
     },
+    // 点击为角色分配权限
     async allotRights() {
-      // 点击为角色分配权限
       const keys = [
         ...this.$refs.treeRef.getCheckedKeys(),
         ...this.$refs.treeRef.getHalfCheckedKeys()

@@ -7,10 +7,13 @@ import '@/plugins/element.js';
 import '@/assets/fonts/iconfont.css';
 
 import { API } from '@/request/index.js';
+import TreeTable from 'vue-table-with-tree-grid';
 
 Vue.prototype.$http = API;
 
 Vue.config.productionTip = false;
+
+Vue.component('tree-table', TreeTable);
 
 new Vue({
   router,

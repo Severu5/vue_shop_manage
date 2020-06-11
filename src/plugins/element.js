@@ -29,7 +29,8 @@ import {
   Tag,
   Tree,
   Select,
-  Option
+  Option,
+  Cascader
 } from 'element-ui';
 
 const cmp = [
@@ -58,7 +59,8 @@ const cmp = [
   Tag,
   Tree,
   Select,
-  Option
+  Option,
+  Cascader
 ];
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
