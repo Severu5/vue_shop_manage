@@ -25,7 +25,11 @@ import {
   Switch,
   Tooltip,
   Pagination,
-  Dialog
+  Dialog,
+  Tag,
+  Tree,
+  Select,
+  Option
 } from 'element-ui';
 
 const cmp = [
@@ -50,7 +54,11 @@ const cmp = [
   Switch,
   Tooltip,
   Pagination,
-  Dialog
+  Dialog,
+  Tag,
+  Tree,
+  Select,
+  Option
 ];
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
