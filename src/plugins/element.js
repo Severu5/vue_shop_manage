@@ -30,7 +30,10 @@ import {
   Tree,
   Select,
   Option,
-  Cascader
+  Cascader,
+  Alert,
+  Tabs,
+  TabPane
 } from 'element-ui';
 
 const cmp = [
@@ -60,7 +63,10 @@ const cmp = [
   Tree,
   Select,
   Option,
-  Cascader
+  Cascader,
+  Alert,
+  Tabs,
+  TabPane
 ];
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
