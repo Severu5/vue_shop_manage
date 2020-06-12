@@ -33,7 +33,12 @@ import {
   Cascader,
   Alert,
   Tabs,
-  TabPane
+  TabPane,
+  Steps,
+  Step,
+  Checkbox,
+  CheckboxGroup,
+  Upload
 } from 'element-ui';
 
 const cmp = [
@@ -66,7 +71,12 @@ const cmp = [
   Cascader,
   Alert,
   Tabs,
-  TabPane
+  TabPane,
+  Steps,
+  Step,
+  Checkbox,
+  CheckboxGroup,
+  Upload
 ];
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
