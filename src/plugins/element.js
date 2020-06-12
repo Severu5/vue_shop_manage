@@ -38,7 +38,9 @@ import {
   Step,
   Checkbox,
   CheckboxGroup,
-  Upload
+  Upload,
+  Timeline,
+  TimelineItem
 } from 'element-ui';
 
 const cmp = [
@@ -76,7 +78,9 @@ const cmp = [
   Step,
   Checkbox,
   CheckboxGroup,
-  Upload
+  Upload,
+  Timeline,
+  TimelineItem
 ];
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
